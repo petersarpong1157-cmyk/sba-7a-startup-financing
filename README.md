@@ -2,6 +2,8 @@
 
 This repository contains the reproducible research materials for a working paper examining how loan amounts and initial interest rates differ between startup and established-business borrowers within the U.S. Small Business Administration (SBA) 7(a) program.
 
+**[Read the working paper (PDF)](paper/Sarpong_SBA_7a_Startup_Financing_Working_Paper.pdf)** | **[View the R analysis](code/sba_7a_analysis.R)** | **[View the results tables](tables/)** | **[Data documentation](data/README.md)**
+
 ## Research question
 
 **How do loan amounts and initial interest rates differ between startup and established-business borrowers within the SBA 7(a) program, and how sensitive are these differences to observable industry, geographic, program, and loan characteristics?**
@@ -43,8 +45,14 @@ These estimates describe **conditional associations among approved SBA 7(a) loan
 ├── data/
 │   └── README.md
 ├── figures/
+│   └── README.md
 ├── tables/
+│   ├── table1_descriptive_statistics.csv
+│   ├── table2_regression_results.csv
+│   └── table3_robustness_results.csv
 └── paper/
+    ├── README.md
+    └── Sarpong_SBA_7a_Startup_Financing_Working_Paper.pdf
 ```
 
 The raw SBA datasets are not stored in this repository. See `data/README.md` for the source files and reproduction notes.
