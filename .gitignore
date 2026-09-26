@@ -1,0 +1,15 @@
+# Raw data and local research files
+*.csv
+*.xlsx
+*.xls
+*.RData
+*.rds
+
+# R session files
+.Rhistory
+.Rapp.history
+.Rproj.user/
+
+# OS files
+.DS_Store
+Thumbs.db
