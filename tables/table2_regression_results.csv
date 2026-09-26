@@ -1,0 +1,10 @@
+Measure,Loan Amount - Baseline,Loan Amount - Extended,Initial Interest Rate - Baseline,Initial Interest Rate - Extended
+Startup coefficient,0.1658,-0.1478,-0.2053,-0.1046
+Lender-clustered SE,0.0709,0.0512,0.0819,0.0407
+p-value,0.019,0.004,0.012,0.010
+Implied loan difference,+18.04%,-13.74%,,
+Fiscal-year FE,Yes,Yes,Yes,Yes
+Project-jurisdiction FE,Yes,Yes,Yes,Yes
+Two-digit NAICS FE,Yes,Yes,Yes,Yes
+Additional controls,No,Yes,No,Yes
+N,"681,990","681,956","681,915","681,881"
