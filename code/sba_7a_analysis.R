@@ -541,3 +541,43 @@ write.csv(annual_startup, "tables/annual_startup_share.csv", row.names = FALSE)
 write.csv(industry_summary, "tables/industry_summary.csv", row.names = FALSE)
 
 # End of reproducible analysis.
+
+
+# ============================================================
+# VERSION 2: CORRECTED HETEROGENEITY SPECIFICATIONS
+# Revised JEF analysis. These models include the common
+# StartupBinary coefficient and the corresponding industry/year
+# fixed effects so the Wald tests assess equality of startup slopes.
+# ============================================================
+
+industry_model2 <- fixest::feols(
+  LogLoan ~
+    StartupBinary +
+    i(NAICS2, StartupBinary, ref = "54") +
+    factor(ProcessingMethod) +
+    factor(BusinessType) +
+    factor(CollateralInd) |
+    ApprovalFY + ProjectState + NAICS2 + BankName,
+  data = v2_sample,
+  cluster = ~BankName
+)
+
+summary(industry_model2)
+fixest::wald(industry_model2, keep = "NAICS2::")
+# Verified result: F(23, 2611) = 16.00, p < .001.
+
+time_model2 <- fixest::feols(
+  LogLoan ~
+    StartupBinary +
+    i(ApprovalFY, StartupBinary, ref = 2010) +
+    factor(ProcessingMethod) +
+    factor(BusinessType) +
+    factor(CollateralInd) |
+    ApprovalFY + ProjectState + NAICS2 + BankName,
+  data = v2_sample,
+  cluster = ~BankName
+)
+
+summary(time_model2)
+fixest::wald(time_model2, keep = "ApprovalFY::")
+# Verified result: F(15, 2611) = 8.34, p < .001.
