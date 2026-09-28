@@ -1,12 +1,12 @@
-# Financing New Ventures: Startup Status and Loan Terms in the U.S. SBA 7(a) Program
+# Financing New Ventures: Startup Status, Lender Composition, and Loan Terms in the U.S. SBA 7(a) Program
 
-This repository contains the reproducible research materials for a working paper examining how loan amounts and initial interest rates differ between startup and established-business borrowers within the U.S. Small Business Administration (SBA) 7(a) program.
+This repository contains reproducible research materials for the revised working paper examining approved loan amounts and initial interest rates for startup and established-business borrowers in the U.S. Small Business Administration (SBA) 7(a) program.
 
 **[Read the working paper (PDF)](paper/Sarpong_SBA_7a_Startup_Financing_Working_Paper.pdf)** | **[View the R analysis](code/sba_7a_analysis.R)** | **[View the results tables](tables/)** | **[Data documentation](data/README.md)**
 
 ## Research question
 
-**How do loan amounts and initial interest rates differ between startup and established-business borrowers within the SBA 7(a) program, and how sensitive are these differences to observable industry, geographic, program, and loan characteristics?**
+**How do approved loan amounts and initial interest rates differ between startup and established-business borrowers within the SBA 7(a) program, and how sensitive are these differences to program and loan characteristics, lender composition, industry, and fiscal year?**
 
 ## Study period and analytical sample
 
@@ -19,62 +19,47 @@ The primary analytical sample contains **681,992 approved SBA 7(a) loans**:
 
 A startup is defined using the SBA `BusinessAge` category **"Startup, Loan Funds will Open Business."** The established-business comparison group uses clearly established business-age categories available in the source files.
 
-## Main findings
+## Revised main findings
 
-Descriptively, startup loans have a median gross approval amount of **$200,000**, compared with **$150,000** for established-business loans.
+In the common-sample loan-amount analysis, the baseline specification implies approximately **18.0% higher** approved amounts for startups. The estimate changes to **-7.1%** after adjustment for processing method and to **-13.7%** after business type and collateral are also included.
 
-In the baseline loan-amount model, which includes fiscal-year, project-jurisdiction, and two-digit NAICS industry fixed effects, startup status is associated with approximately **18.04% higher** gross approval amounts.
+With lender fixed effects, the baseline startup difference falls to approximately **+4.8%** and is not statistically significant. The fully adjusted lender fixed-effects estimate is approximately **-15.2%**.
 
-In the extended loan-amount specification, which additionally accounts for processing method, business type, and collateral status, the association reverses to approximately **13.74% lower** gross approval amounts.
+For initial interest rates, startup status is associated with rates approximately **0.205 percentage points lower** in the baseline specification and **0.104 percentage points lower** in the fully adjusted specification without lender fixed effects. These differences do **not** persist within lenders: the fully adjusted lender fixed-effects estimate is approximately **+0.046 percentage points** and is not statistically significant.
 
-For initial interest rates, startup status is associated with rates approximately **0.205 percentage points lower** in the baseline specification and **0.105 percentage points lower** in the extended specification.
+Corrected heterogeneity specifications show significant variation in the startup-loan amount relationship:
 
-The sign reversal in the loan-amount models is an important part of the result: the observed startup-loan-size relationship is sensitive to program, borrower, and loan composition.
+- **Industry heterogeneity:** Wald F(23, 2611) = **16.00**, p < .001.
+- **Fiscal-year heterogeneity:** Wald F(15, 2611) = **8.34**, p < .001.
+
+The industry-specific point estimates are presented descriptively; the joint Wald test provides the primary inference on industry heterogeneity.
 
 ## Interpretation
 
 These estimates describe **conditional associations among approved SBA 7(a) loans**. They do **not** identify a causal effect of startup status and do **not** estimate whether startups are more or less likely to obtain credit.
 
-## Repository structure
-
-```
-.
-├── README.md
-├── code/
-│   └── sba_7a_analysis.R
-├── data/
-│   └── README.md
-├── figures/
-│   └── README.md
-├── tables/
-│   ├── table1_descriptive_statistics.csv
-│   ├── table2_regression_results.csv
-│   └── table3_robustness_results.csv
-└── paper/
-    ├── README.md
-    └── Sarpong_SBA_7a_Startup_Financing_Working_Paper.pdf
-```
-
-The raw SBA datasets are not stored in this repository. See `data/README.md` for the source files and reproduction notes.
+The revised analysis emphasizes specification sensitivity, lender composition, program and loan characteristics, and heterogeneity across industry and time rather than a universal startup financing premium or penalty.
 
 ## Methods
 
-The empirical workflow includes:
+The revised empirical workflow includes:
 
 - construction of a consistent startup/established-business classification;
 - descriptive statistics and loan-amount distributions;
-- annual startup-share calculations;
-- two-digit NAICS industry comparisons;
-- OLS models for log gross approval amount;
-- OLS models for initial interest rates;
-- fiscal-year, project-jurisdiction, and industry fixed effects;
+- common-sample sequential loan-amount and interest-rate specifications;
+- fiscal-year, project-jurisdiction, and two-digit NAICS fixed effects;
 - lender-clustered standard errors;
-- project-jurisdiction clustering as a robustness check; and
-- a stricter business-age classification as an additional robustness test.
+- lender fixed-effects specifications;
+- corrected startup-by-industry heterogeneity specifications;
+- corrected startup-by-fiscal-year heterogeneity specifications;
+- project-jurisdiction clustering as a robustness check;
+- a stricter business-age classification;
+- CPI-U inflation-adjusted descriptive loan-amount trends; and
+- inflation-adjusted lender fixed-effects robustness analysis.
 
 ## Software
 
-The analysis is conducted in **R**. Principal packages used in the analysis include `dplyr`, `tidyr`, `ggplot2`, `scales`, `sandwich`, and `lmtest`.
+The analysis is conducted in **R**. Principal packages include `dplyr`, `tidyr`, `ggplot2`, `scales`, `sandwich`, `lmtest`, and `fixest`.
 
 ## Data source
 
@@ -82,8 +67,14 @@ U.S. Small Business Administration, **7(a) & 504 FOIA** open-data files. The ana
 
 Official SBA open-data page: https://data.sba.gov/dataset/7a-504-foia
 
+Raw SBA datasets are not stored in this repository.
+
+## Version 2 correction note
+
+The revised heterogeneity models include a common `StartupBinary` coefficient together with startup-by-industry or startup-by-year interactions and the corresponding fixed effects. This parameterization makes the interaction Wald tests tests of equality of startup slopes across industries or fiscal years. The corrected joint statistics are **F(23, 2611) = 16.00** for industry and **F(15, 2611) = 8.34** for fiscal year.
+
 ## Author
 
 **Peter Sarpong**
 
-Working paper, September 2026.
+Revised working paper, September 2026.
