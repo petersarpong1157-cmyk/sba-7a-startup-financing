@@ -71,7 +71,7 @@ Raw SBA datasets are not stored in this repository.
 
 ## Version 2 correction note
 
-The revised heterogeneity models include a common `StartupBinary` coefficient together with startup-by-industry or startup-by-year interactions and the corresponding fixed effects. This parameterization makes the interaction Wald tests tests of equality of startup slopes across industries or fiscal years. The corrected joint statistics are **F(23, 2611) = 16.00** for industry and **F(15, 2611) = 8.34** for fiscal year.
+The revised heterogeneity models include a common `StartupBinary` coefficient together with startup-by-industry or startup-by-year interactions and the corresponding fixed effects. This parameterization makes the interaction Wald tests assessments of equality of startup slopes across industries or fiscal years. The corrected joint statistics are **F(23, 2611) = 16.00** for industry and **F(15, 2611) = 8.34** for fiscal year.
 
 ## Author
 
