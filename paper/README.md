@@ -1,13 +1,16 @@
-# Working Paper
+# Working paper
 
-The manuscript associated with this repository is:
+Current revised title:
 
-**Peter Sarpong. _Financing New Ventures: Startup Status and Loan Terms in the U.S. SBA 7(a) Program._ Working Paper, September 2026.**
+**Financing New Ventures: Startup Status, Lender Composition, and Loan Terms in the U.S. SBA 7(a) Program**
 
-The paper analyzes 681,992 approved SBA 7(a) loans from FY2010-FY2025.
+The Version 2 manuscript substantially revises the empirical analysis in response to editorial feedback. The revision adds common-sample sequential specifications, lender fixed effects, corrected industry and fiscal-year heterogeneity tests, and CPI-U inflation-adjusted descriptive analysis.
 
-A PDF version can be placed in this folder as:
+Key corrected heterogeneity results:
 
-`Sarpong_SBA_7a_Startup_Financing_Working_Paper.pdf`
+- Industry: Wald F(23, 2611) = 16.00, p < .001.
+- Fiscal year: Wald F(15, 2611) = 8.34, p < .001.
 
-The paper and repository should be interpreted together with the central limitation that the data contain approved SBA 7(a) loans. The estimates are conditional associations and do not identify causal effects or application approval probabilities.
+The analysis concerns approved SBA 7(a) loans and reports conditional associations. It does not estimate credit-access probabilities or causal effects.
+
+The PDF in this directory should correspond to the final revised manuscript before a Version 2 archival release is created.
