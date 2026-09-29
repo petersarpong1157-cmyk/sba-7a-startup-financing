@@ -1,5 +1,9 @@
 # Financing New Ventures: Startup Status, Lender Composition, and Loan Terms in the U.S. SBA 7(a) Program
 
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23027290.svg)](https://doi.org/10.5281/zenodo.23027290)
+
+**Archived release:** [v3.3.2 on Zenodo](https://doi.org/10.5281/zenodo.23027290) | [v3.3.2 on GitHub](https://github.com/petersarpong1157-cmyk/sba-7a-startup-financing/releases/tag/v3.3.2)
 This repository contains reproducible research materials for the revised working paper examining approved loan amounts and initial interest rates for startup and established-business borrowers in the U.S. Small Business Administration (SBA) 7(a) program.
 
 **[Read the revised Version 2 working paper (PDF)](paper/Sarpong_SBA_7a_JEF_Version_2_Final_Corrected.pdf)** | **[View the R analysis](code/sba_7a_analysis.R)** | **[View the results tables](tables/)** | **[Data documentation](data/README.md)**
