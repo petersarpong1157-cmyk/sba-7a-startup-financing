@@ -8,7 +8,7 @@
 
 This repository contains reproducible research materials for the accepted study examining approved loan amounts and initial interest rates for startup and established-business borrowers in the U.S. Small Business Administration (SBA) 7(a) program.
 
-**[Read the pre-acceptance Version 2 working paper (PDF)](paper/Sarpong_SBA_7a_JEF_Version_2_Final_Corrected.pdf)** | **[View the R analysis](code/sba_7a_analysis.R)** | **[View the results tables](tables/)** | **[Data documentation](data/README.md)**
+**[View the R analysis](code/sba_7a_analysis.R)** | **[View the results tables](tables/)** | **[Data documentation](data/README.md)**
 
 ## Research question
 
@@ -75,7 +75,7 @@ Official SBA open-data page: https://data.sba.gov/dataset/7a-504-foia
 
 Raw SBA datasets are not stored in this repository.
 
-## Version 2 figures
+## Research figures
 
 - [Figure 1: nominal and inflation-adjusted startup loan amounts](figures/figure1_nominal_real.png)
 - [Figure 3: industry-specific startup–established loan-amount differences](figures/figure3_industry_heterogeneity.png)
@@ -84,7 +84,7 @@ Raw SBA datasets are not stored in this repository.
 
 The journal accepted Manuscript #1558 following revisions. The author rechecked the loan-amount and interest-rate models against the SBA FOIA data and reconciled the fixed-effects sample sizes. See [acceptance and verification notes](docs/JEF_MS1558_acceptance_and_verification.md) for reproducibility details. The archived Zenodo v3.3.2 record is an earlier research version, not the published journal article.
 
-## Version 2 correction note
+## Reproducibility correction note
 
 The revised heterogeneity models include a common `StartupBinary` coefficient together with startup-by-industry or startup-by-year interactions and the corresponding fixed effects. This parameterization makes the interaction Wald tests assessments of equality of startup slopes across industries or fiscal years. The corrected joint statistics are **F(23, 2611) = 16.00** for industry and **F(15, 2611) = 8.34** for fiscal year.
 
