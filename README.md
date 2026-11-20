@@ -3,12 +3,18 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23027290.svg)](https://doi.org/10.5281/zenodo.23027290)
 
-**Earlier archived research release (before journal acceptance):** [v3.3.2 on Zenodo](https://doi.org/10.5281/zenodo.23027290) | [v3.3.2 on GitHub](https://github.com/petersarpong1157-cmyk/sba-7a-startup-financing/releases/tag/v3.3.2)
-**Publication status (November 2026): ACCEPTED for publication in *The Journal of Entrepreneurial Finance* (Pepperdine University), Manuscript #1558.** Final issue, publication date, pages, and journal DOI are not yet confirmed.
+**Earlier archived code/research release (not the journal article):** [v3.3.2 on Zenodo](https://doi.org/10.5281/zenodo.23027290) | [v3.3.2 on GitHub](https://github.com/petersarpong1157-cmyk/sba-7a-startup-financing/releases/tag/v3.3.2)
+**Publication status: PUBLISHED (November 19, 2026)** in *The Journal of Entrepreneurial Finance*, **Volume 28, Issue 1, Article 1** (MS #1558). [Read the published journal article](https://digitalcommons.pepperdine.edu/jef/vol28/iss1/1). A separate publisher DOI and final pagination have not yet been verified.
 
-This repository contains reproducible research materials for the accepted study examining approved loan amounts and initial interest rates for startup and established-business borrowers in the U.S. Small Business Administration (SBA) 7(a) program.
+This repository contains reproducible research materials accompanying the published study examining approved loan amounts and initial interest rates for startup and established-business borrowers in the U.S. Small Business Administration (SBA) 7(a) program.
 
 **[View the R analysis](code/sba_7a_analysis.R)** | **[View the results tables](tables/)** | **[Data documentation](data/README.md)**
+
+## Published article citation
+
+Sarpong, P. (2026). Financing new ventures: Startup status, lender composition, and loan terms in the U.S. SBA 7(a) program. *The Journal of Entrepreneurial Finance, 28*(1), Article 1. https://digitalcommons.pepperdine.edu/jef/vol28/iss1/1
+
+*Journal-article DOI: not yet verified. The Zenodo badge above identifies an earlier reproducibility release, not the journal article.*
 
 ## Research question
 
@@ -80,9 +86,9 @@ Raw SBA datasets are not stored in this repository.
 - [Figure 1: nominal and inflation-adjusted startup loan amounts](figures/figure1_nominal_real.png)
 - [Figure 3: industry-specific startup–established loan-amount differences](figures/figure3_industry_heterogeneity.png)
 
-## Accepted manuscript and referee audit
+## Published article and reproducibility audit
 
-The journal accepted Manuscript #1558 following revisions. The author rechecked the loan-amount and interest-rate models against the SBA FOIA data and reconciled the fixed-effects sample sizes. See [acceptance and verification notes](docs/JEF_MS1558_acceptance_and_verification.md) for reproducibility details. The archived Zenodo v3.3.2 record is an earlier research version, not the published journal article.
+The journal published Manuscript #1558 in Volume 28, Issue 1, Article 1 in November 2026. [Official article page](https://digitalcommons.pepperdine.edu/jef/vol28/iss1/1). The author rechecked the loan-amount and interest-rate models against the SBA FOIA data and reconciled the fixed-effects sample sizes. See [acceptance and verification notes](docs/JEF_MS1558_acceptance_and_verification.md) for reproducibility details. The archived Zenodo v3.3.2 record is an earlier research version, not the published journal article.
 
 ## Reproducibility correction note
 
@@ -94,4 +100,4 @@ The revised heterogeneity models include a common `StartupBinary` coefficient to
 
 Independent Researcher, Gaithersburg, Maryland, USA.
 
-Accepted for publication in *The Journal of Entrepreneurial Finance*, November 2026 (MS #1558).
+Published in *The Journal of Entrepreneurial Finance*, **28**(1), Article 1 (2026). [Official publication](https://digitalcommons.pepperdine.edu/jef/vol28/iss1/1).
