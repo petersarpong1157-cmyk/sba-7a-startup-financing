@@ -3,7 +3,7 @@
 **Article:** Financing New Ventures: Startup Status, Lender Composition, and Loan Terms in the U.S. SBA 7(a) Program
 **Author:** Peter Sarpong, Independent Researcher
 **Journal:** The Journal of Entrepreneurial Finance
-**Status:** Accepted for publication in November 2026; publication date, issue, pagination and article DOI not yet confirmed.
+**Status:** Published November 2026 in *The Journal of Entrepreneurial Finance*, 28(1), Article 1. Official publication: https://digitalcommons.pepperdine.edu/jef/vol28/iss1/1 . Journal DOI and final pagination remain unverified.
 
 ## Source and cohort
 FY2010–FY2025 SBA 7(a) FOIA extracts (as of June 30, 2026): 893,265 fiscal-year-filtered records; 681,992 eligible approved loans (138,054 startup, 543,938 established).
@@ -39,4 +39,4 @@ Preferred Lenders Program: 50.5% of startup loans versus 38.0% of established lo
 ## Scope and provenance
 Estimates are observational conditional associations among **approved loans**, not causal effects or estimates of approval/access. Lenders are identified by the SBA BankName field, not a separately validated persistent institution ID. The raw SBA data are not redistributed. Official source: https://data.sba.gov/dataset/7a-504-foia .
 
-The existing Zenodo v3.3.2 release predates journal acceptance; it is not the published journal article or an article DOI. Verify permissions before releasing the publisher-formatted manuscript.
+The existing Zenodo v3.3.2 release predates journal publication; it is not the published journal article or its DOI. Verify permissions before releasing the publisher-formatted manuscript.
